@@ -1,0 +1,33 @@
+<template>
+  <div id="app">
+    <SelectArea></SelectArea>
+    <div class="bg">
+      <div class="content">
+        <router-view/>
+      </div>
+    </div>
+    <TabBar></TabBar>
+  </div>
+</template>
+<script>
+  import TabBar from "./components/TabBar";
+  import SelectArea from "./components/SelectArea";
+  // import SelectDate from "./components/SelectDate";
+  export default {
+    name: 'app',
+    components: { TabBar,  SelectArea}
+  }
+</script>
+
+<style lang="scss">
+  .bg{
+    padding: 100px 0;
+    background: #2c86ff;
+    .content{
+      margin: 0 auto;
+      width: 95%;
+
+    }
+  }
+
+</style>
