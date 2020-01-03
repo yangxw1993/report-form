@@ -20,14 +20,17 @@
 </script>
 
 <style lang="scss">
-  .bg{
-    padding: 100px 0;
+  #app{
     background: #2c86ff;
-    .content{
-      margin: 0 auto;
-      width: 95%;
+    .bg{
+      padding: 100px 0;
+      .content{
+        margin: 0 auto;
+        width: 95%;
 
+      }
     }
   }
+
 
 </style>

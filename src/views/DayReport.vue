@@ -3,6 +3,7 @@
     <el-table
         :data="tableData"
         highlight-current-row
+        :height="tableHeight"
         style="width: 100%">
       <el-table-column
           v-for="(item, index) in tableHeader"
@@ -20,6 +21,7 @@
   export default {
     data() {
       return {
+        tableHeight: window.innerHeight - 180,
         tableHeader: [
           {
             label: '项目',
@@ -49,6 +51,34 @@
           shenzhen: '12.3%',
           shanghai: '20%'
         },
+          {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          },
+          {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          },
+          {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          },
+          {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          },
           {
             project: '门店',
             country: 115,
