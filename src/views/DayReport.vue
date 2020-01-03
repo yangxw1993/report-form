@@ -120,6 +120,36 @@
             beijing: 13,
             shenzhen: '12.3%',
             shanghai: '20%'
+          },{
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          }, {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          }, {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          }, {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          }, {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
           }]
       }
     }
