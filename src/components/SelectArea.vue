@@ -46,6 +46,7 @@
   padding: 10px 0;
   width: 100%;
   background: #2c86ff;
+  z-index: 9999;
   .select{
     background: #2c86ff;
   }

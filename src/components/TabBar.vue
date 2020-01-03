@@ -45,6 +45,7 @@
   width: 100%;
   height: 80px;
   background: #ccc;
+  z-index: 9999;
   &-item{
     flex: 1;
     height: 80px;
