@@ -13,10 +13,15 @@
         msg: 'MonthReport'
       }
     },
+    // 实例创建完成
     mounted: function () {
-      getJSON().then(res => {
-        this.content = JSON.stringify(res)
-      })
+      this.getData();
+    },
+    methods:{
+      async getData(){
+        let res = await getJSON();
+        console.log(res,'***')
+      }
     }
   }
 </script>

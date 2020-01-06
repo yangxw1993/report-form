@@ -2,6 +2,8 @@
   <div class="table">
     <el-table
         :data="tableData"
+        highlight-current-row
+        :height="tableHeight"
         :row-class-name="tableRowClassName"
         style="width: 100%">
       <el-table-column
@@ -26,6 +28,7 @@
   export default {
     data() {
       return {
+        tableHeight: window.innerHeight - 180,
         tableHeader: [
           {
             label: '项目',
@@ -80,25 +83,83 @@
           {
             project: '门店',
             country: 115,
-            beijing: 18,
+            beijing: 13,
             shenzhen: '12.3%',
             shanghai: '20%'
           },
           {
             project: '门店',
             country: 115,
-            beijing: 20,
+            beijing: 13,
             shenzhen: '12.3%',
             shanghai: '20%'
           },
           {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          },
+          {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          },
+          {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          },
+          {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          },
+          {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          },{
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          }, {
+            project: '门店',
+            country: 115,
+            beijing: 13,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          }, {
+            project: '门店',
+            country: 115,
+            beijing: 18,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          }, {
+            project: '门店',
+            country: 115,
+            beijing: 20,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          }, {
             project: '门店',
             country: 115,
             beijing: 1,
             shenzhen: '12.3%',
             shanghai: '20%'
           }],
-      }      
+      }
     },
     methods: {
       tableRowClassName({row}){
