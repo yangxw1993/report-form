@@ -2,7 +2,7 @@
   <div class="table">
     <el-table
         :data="tableData"
-        highlight-current-row
+        :row-class-name="tableRowClassName"
         style="width: 100%">
       <el-table-column
           v-for="(item, index) in tableHeader"
@@ -15,6 +15,12 @@
   </div>
 
 </template>
+<style lang="scss">
+  .el-table .bg-red{
+    pointer-events: none;
+    background: red;
+  }
+</style>
 
 <script>
   export default {
@@ -42,13 +48,7 @@
             prop: 'shanghai',
           },
         ],
-        tableData: [{
-          project: '门店',
-          country: 115,
-          beijing: 13,
-          shenzhen: '12.3%',
-          shanghai: '20%'
-        },
+        tableData: [
           {
             project: '门店',
             country: 115,
@@ -80,17 +80,31 @@
           {
             project: '门店',
             country: 115,
-            beijing: 13,
+            beijing: 18,
             shenzhen: '12.3%',
             shanghai: '20%'
           },
           {
             project: '门店',
             country: 115,
-            beijing: 13,
+            beijing: 20,
             shenzhen: '12.3%',
             shanghai: '20%'
-          }]
+          },
+          {
+            project: '门店',
+            country: 115,
+            beijing: 1,
+            shenzhen: '12.3%',
+            shanghai: '20%'
+          }],
+      }      
+    },
+    methods: {
+      tableRowClassName({row}){
+        if(row.beijing > 13){
+          return 'bg-red';
+        }
       }
     }
   }
