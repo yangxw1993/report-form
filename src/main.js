@@ -13,6 +13,33 @@ import 'element-ui/lib/theme-chalk/index.css';
 import './assets/css/base.css'
 Vue.config.productionTip = false
 
+//路由守卫
+router.beforeEach((to, from, next) => {
+  console.log(to,'to');
+  console.log(from,'from');
+  if (to.meta.isLogin) { // 判断该路由是否需要登录权限
+    const { loginInfo } = localStorage;
+    if(loginInfo){ //判断本地是否存在登录信息
+      next();
+    }else {
+      next({
+        path:'/login'
+      })
+    }
+  }else {
+    next();
+  }
+  /*如果本地 存在 token 则 不允许直接跳转到 登录页面*/
+  // if(to.fullPath == "/login"){
+  //   if(JSON.parse(localStorage.getItem('islogin'))){
+  //     next({
+  //       path:from.fullPath
+  //     });
+  //   }else {
+  //     next();
+  //   }
+  // }
+});
 new Vue({
   router,
   store,
