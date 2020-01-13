@@ -161,6 +161,12 @@
           }],
       }
     },
+    mounted: function(){
+      console.log(this.$store)
+      // 修改VueX中的值
+      this.$store.dispatch('changeUserAction', {userName:'yxw'})
+      console.log(this.$store.state.userInfo);
+    },
     methods: {
       tableRowClassName({row}){
         if(row.beijing > 13){
