@@ -25,6 +25,7 @@
 </style>
 
 <script>
+import { dayCountry } from '../service/reportForm';
   export default {
     data() {
       return {
@@ -162,17 +163,25 @@
       }
     },
     mounted: function(){
-      console.log(this.$store)
       // 修改VueX中的值
       this.$store.dispatch('changeUserAction', {userName:'yxw'})
-      console.log(this.$store.state.userInfo);
+      this.getDayCountry();
     },
     methods: {
+      getDayCountry(){
+        const param = {
+          day: '昨天'
+        }
+        dayCountry(param).then(res => {
+          console.log(res);
+        }).catch(err => {console.log(err)})
+      },
       tableRowClassName({row}){
         if(row.beijing > 13){
           return 'bg-red';
         }
-      }
+      },
+
     }
   }
 </script>

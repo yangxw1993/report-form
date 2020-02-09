@@ -1,19 +1,21 @@
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'http://43.241.229.214:8090';
+const prefix = '/chainsales/operationBull';
+
 const SUCCESS_CODE = 0;
 const API_URL = {
-  INIT: `${BASE_URL}/init`,
-  TEST: 'https://cdn.bestseller.com.cn/assets/wechat/SELECTED/main.json?v=0.6046330790172505',
-  /**
-   * 用户
-   */
-  REGISTER: `${BASE_URL}/user/register`,
-  LOGIN: `${BASE_URL}/user/login`,
-
-  /**
-   * 商品
-   */
-  ADD_GOODS:`${BASE_URL}/goods/addGoods`,
-  GET_GOODS_LIST:`${BASE_URL}/goods/getGoods`
+  // 运营快报日报表全国版
+  DAY_COUNTRY: `${BASE_URL}${prefix}/dayOperationBull/getData`,
+  // DAY_COUNTRY: `/assets/data/dayCountry`,
+  // 运营快报日报表区域版
+  DAY_AREA: `${BASE_URL}${prefix}/dayOperationBull/getareaData`,
+  // 运营快报周报表全国版
+  WEEK_COUNTRY: `${BASE_URL}${prefix}/weekOperationBull/getData`,
+  // 运营快报周报表区域版
+  WEEK_AREA: `${BASE_URL}${prefix}/dweekOperationBull/getareaData `,
+  // 运营快报月报表全国版
+  MONTH_COUNTRY: `${BASE_URL}${prefix}/monthOperationBull/getData`,
+  // 运营快报月报表区域版
+  MONTH_AREA: `${BASE_URL}${prefix}/monthOperationBull/getareaData `,
 };
 
 export  {
